@@ -1,0 +1,27 @@
+<div class="container p-4">
+    <div class="row"> 
+        {{#each usuarios}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h6 class="card-title text-uppercase">
+                           {{nombre}} {{apellido}} 
+                        </h6>
+                    </div>
+                    <div class="m-1">
+                        <span> edad: {{ edad }}</span>
+                    </div>
+                    <a href="/delete/{{ID}}" class="btn btn-danger" >Eliminar</a>
+                    <a href="/edit/{{ID}}" class="btn btn-secondary">Editar</a>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay usuarios agragados</p>
+                    <a href="/" class="btn btn-success">agragar usuarios</a>
+                </div>
+            </div>    
+        {{/each}}
+    </div>
+</div>
